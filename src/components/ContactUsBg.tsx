@@ -5,7 +5,7 @@ import ReviewCard from '../components/ReviewCard';
 import section2 from '../images/section2.png';
 import portfolioSample from '../images/portfolioSample.jpg';
 import flowerReview from '../images/flowerReview.png';
-import reviewCardData from "../data/reviewCardData"
+import reviewCardData from "../data/reviewCardData";
 
 const ContactUsBg = () =>{
     return(
@@ -52,7 +52,7 @@ const ContactUsBg = () =>{
                 <div className="page-width z-60">
                         <div className="grid double-grid-50-50" style={{maxWidth: "1140px"}}>
                             <div className="section-2-text">
-                            <h2   style={{fontSize: "40px", color:"#DD6E89" , fontWeight:"700"}}>LOREM IPSUM</h2>
+                            <h2   style={{fontSize: "40px", color:"#DD6E89" , fontWeight:"bold"}}>LOREM IPSUM</h2>
                                 <p>Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum</p>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ const ContactUsBg = () =>{
                         <div className="grid double-grid-50-50 z-60" style={{maxWidth: "1140px"}}>
                             <div></div>
                             <div className="section-2-text">
-                            <h2   style={{fontSize: "40px", color:"#DD6E89" , fontWeight:"700"}}>LOREM IPSUM</h2>
+                            <h2   style={{fontSize: "40px", color:"#DD6E89", fontWeight:"bold"}}>LOREM IPSUM</h2>
                                 <p>Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum</p>
                             </div>
                         </div>
