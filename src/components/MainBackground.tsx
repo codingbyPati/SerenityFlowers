@@ -1,14 +1,21 @@
 import * as React from 'react';
 import '../../src/styles.scss';
 import mainImage from '../images/mainImage.jpg';
-import Button from '../components/Button'
+import Button from '../components/Button';
+import Logo from '../components/Logo';
 
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {Link} from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-
+import { useSpring, animated } from 'react-spring';
 
 const MainBackground = () => {
+  const props = useSpring({ 
+     to: { opacity: 1 },
+     from: { opacity: 0 },
+     delay: 1000,
+    })
     /*
     const data = useStaticQuery(graphql`
     query MyQuery {
@@ -39,15 +46,12 @@ const MainBackground = () => {
                         <span>653 363 3634</span>
                         <span>awesomeemail@gmail.com</span>
                       </div>
-                      <div className="logo">
-                        <div className="pink-dot"></div>
-                        <div style={{fontSize:"50px"}}>Serenity Flowers</div>
-                        <div style={{color:"black", fontSize:"24px"}}>Flowers</div>
-                      </div>
+                      <Logo/>
                       <div className="social-media">
+                      <Link><div className="social-dots"></div>
+                      </Link>  
                         <div className="social-dots"></div>
-                        <div className="social-dots"></div>
-
+              
                   
                       </div>
                   
@@ -89,10 +93,16 @@ const MainBackground = () => {
                     </div>
                     
                   </div>
-                  <div className="test">
-                      <h1 className="title-bg">Most beautiful flowers</h1> 
+                  <div>
+                      <animated.h1  className="title-bg" style={props}>Most beautiful flowers</animated.h1>
                   </div>
-                  <Button type="dark">Portfolio</Button>
+                  <div className="display-flex justify-content-center margin-top">
+                    <Button type="dark">
+                     Portfolio
+
+                    </Button>
+                  </div>
+                  
             </div>
            
            
