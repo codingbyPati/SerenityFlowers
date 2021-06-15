@@ -36,6 +36,27 @@ const portfolioImgData = [
         id: 8,
         image: offer2
     },
+    {
+        id: 9,
+        image: portfolioSample
+    },
+    {
+        id: 10,
+        image: portfolio
+    },
+    {
+        id: 11,
+        image: offer2
+    },
+    {
+        id: 12,
+        image: portfolioSample
+    },
+
+
+    
+
+
 
 
 ]

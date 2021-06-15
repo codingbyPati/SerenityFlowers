@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 
+
 const Footer = () =>{
     return(
         <React.Fragment>
@@ -105,9 +106,11 @@ const Footer = () =>{
                 <div className="footer-bottom">
 
                 </div>
+               
                     
           
             </section>
+            
 
         </React.Fragment>
        
