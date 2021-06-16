@@ -13,13 +13,13 @@ const ContactUsBg = () =>{
             <section className="sectionBox dotted-bottom">
                 
                 <div className="linksBar">
-                    <span >ANNIVERSARY</span>
-                    <span> BIRTHDAY</span>
-                    <span> WEDDINGS</span>
-                    <span> FUNERALS</span>
-                    <span> FESTIVALS</span>
-                    <span> CHRISTMAS</span>
-                    <span>THANKSGIVING</span>
+                    <div>ANNIVERSARY</div>
+                    <div>BIRTHDAY</div>
+                    <div> WEDDINGS</div>
+                    <div> FUNERALS</div>
+                    <div> FESTIVALS</div>
+                    <div> CHRISTMAS</div>
+                    <div>THANKSGIVING</div>
                 </div>
                 <div className="lightPinkContainer">
                     <div className="center">

@@ -311,10 +311,18 @@ body {
   display: flex;
   background-color: #D6617D;
   color: white;
-  gap: 20px;
   letter-spacing: 2px;
   font-weight: 800;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.linksBar > div {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .lightPinkContainer {
@@ -679,11 +687,10 @@ input, textarea {
 
 .mob-menu-background {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 54px;
   background-color: #d6617d;
   top: 0;
-  z-index: 100;
   display: none;
 }
 
@@ -770,11 +777,23 @@ input, textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
   }
   .mob-menu-background {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .linksBar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 

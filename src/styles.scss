@@ -269,11 +269,18 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
     display: flex;
     background-color:$pink-font;
     color: white;
-    gap: 20px;
     letter-spacing: 2px;
     font-weight: 800;
     width: 100%;
-   
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & > div {
+    padding-left: 5px;
+    padding-right: 5px;
+  
+    }
 }
 
 .lightPinkContainer{
@@ -574,12 +581,12 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
     }
     .mob-menu-background{
         position: fixed;
-        width:100%;
+        width:100vw;
         height: 54px;
         background-color: rgb(214, 97, 125);
         top:0;
-        z-index: 100;
         display: none;
+       
     }
     .menuBg{
   
@@ -659,10 +666,18 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
           .menuBg{
               visibility: visible;
               display: flex;
+              width: 100%;
           }
 
           .mob-menu-background{
               display: flex;
+           
+          }
+
+          .linksBar{
+              flex-direction: row;
+              display: flex;
+              flex-wrap: wrap;
           }
       }
 
