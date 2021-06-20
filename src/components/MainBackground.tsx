@@ -69,12 +69,15 @@ const MainBackground = () => {
                      
                     </div> 
                   </div>
-                  <div className="mob-menu-background"></div>
+                  <div className="mob-menu-background">
+                   <div className="mob-menu-logo">Serenity Flowers</div> 
+                  </div>
+               
                   <div onClick={toggleMenu}>
                       <img className="menu-btn" src={menuActive ? cancel : menubutton} />
                   
                   </div>
-                  {menuActive && <MobileMenu/>  }
+                  {menuActive && <MobileMenu/> }
                    
                   <div className="navbar">
                     <AnchorLink

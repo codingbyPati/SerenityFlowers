@@ -27,19 +27,18 @@ body{
 }
 .landing-page{
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
  
 }
 .mainContainer {
-    margin-top:20px;
-    height:100vh;
+    margin-top:40px;
     width: 1140px;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .backgroundImg{
@@ -176,6 +175,7 @@ body{
     border-radius:8px;
     transition: 0.2s all  ease;
     width: 313px;
+    margin-top: 20px;
 }
 
 
@@ -248,7 +248,10 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
     width: 100%;
     background-color: $bg-color;
     position:relative;
-    height: 480px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-bottom: 40px;
 }
 
 .dotted-bottom{
@@ -263,9 +266,7 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
 
 .linksBar{
     position: relative;
-    align-items:center;
     justify-content: center;
-    height: 36px;
     display: flex;
     background-color:$pink-font;
     color: white;
@@ -285,7 +286,12 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
 
 .lightPinkContainer{
     color:white;
-   
+    justify-content: center;
+    display: flex;
+    width: 1140px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .title-bgtwo{
@@ -294,14 +300,14 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
     text-shadow: 0px 0px 30px #000000;
     text-align: center;
     color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.center{
-    
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    
+.text-part{
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 20px;
 }
 
 .section-template{
@@ -353,7 +359,7 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
     grid-template-columns: 2fr 1fr;
   }
 
-  .double-grid-50-50 {
+  .double-grid-50-50, .double-grid-50-50-test {
     grid-template-columns: 1fr 1fr;
   }
   
@@ -399,7 +405,7 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
 
     .bg-style{
         background-color: $bg-color;
-        height: 495px;
+        padding-bottom: 50px;
        
     }
 
@@ -456,7 +462,7 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
         display: block;
         justify-content: center;
         background-color: #DDECF4;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 
     .portfolio-grid-box{
@@ -472,8 +478,9 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
         grid-row-gap:10px;
         justify-items: center;
         align-items: center;
-
         align-content: center;
+        margin-bottom: 40px;
+    
       }
       
     .portfolio-item-box{
@@ -586,8 +593,10 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
         background-color: rgb(214, 97, 125);
         top:0;
         display: none;
-       
+        
     }
+
+
     .menuBg{
   
         background-color: rgb(214, 97, 125);
@@ -613,6 +622,13 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
         text-align: center;
     }
 
+    .mob-menu-logo{
+        display: flex;
+        margin-left: 20px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
 
     @media only screen and(max-width:1180px){
         .mainContainer {
@@ -624,7 +640,6 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
             grid-template-areas:
               ".";
             width: 100%;
-
         }
     }
 
@@ -643,8 +658,14 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
             justify-items: center;
             width: 100%;
          }
-         .bg-style{
-             padding-bottom: 80px;
+
+         .lightPinkContainer{
+             width: 100%;
+         }
+
+         .portfolio-grid{
+             margin-left: 10px;
+             margin-right: 10px;
          }
 
     
@@ -679,6 +700,8 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
               display: flex;
               flex-wrap: wrap;
           }
+
+         
       }
 
 
@@ -701,21 +724,29 @@ box-shadow: inset 0px 0px 11px 6px rgba(218,44,85,0.6);
            justify-items: center;
            width: 100%;
         }
-        .bg-style{
-            padding-bottom: 470px;
-        }
+        
 
         
      }
 
+     @media only screen and (max-width:570px){
+        .double-grid-50-50 {
+            grid-template-columns: 100% 0;
+          }
+        .double-grid-50-50-test{
+            grid-template-columns: 0 100%;
+        } 
 
-     @media only screen and (max-width: 465px) {
-     
-        .bg-style{
-            padding-bottom: 550px;
+        .triple-grid{
+            grid-template-columns: 0% 100% 0%;
         }
-
-    
+        .double-grid-33-66 {
+            grid-template-columns: 0 100%;
+        }
      }
+
+   
+
+
 
 
