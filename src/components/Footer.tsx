@@ -9,68 +9,71 @@ const Footer = () =>{
     return(
         <React.Fragment>
             <section className="footer-bg">
-                <div className="footer-grid">
-                    <div className="contact-item">
-                        <p>3743 834 383</p>
-                        <p>sfgs@shf.com</p>
-                        <p>address</p>
-                        <div className="display-flex">
-                            <div className="social-dots"></div>
-                            <div className="social-dots"></div>
+                <div className="">
+                    <div className="footer-grid">
+                            <div className="contact-item">
+                                <p>3743 834 383</p>
+                                <p>sfgs@shf.com</p>
+                                <p>address</p>
+                                <div className="dots">
+                                    <div className="social-dots"></div>
+                                    <div className="social-dots"></div>
+                                </div>
+                                <div className="footer-bg2">
+                                        <AnchorLink
+                                        className="footer-links"
+                                        to="/"
+                                        >
+                                        Privacy
+                                        </AnchorLink >
+                                        <AnchorLink
+                                        className="footer-links"
+                                        to="/"
+                                        >
+                                        Help
+                                        </AnchorLink>
+                                        <AnchorLink
+                                        className="footer-links"
+                                        to="/"
+                                        >
+                                        Other
+                                        </AnchorLink>
+                                </div>
+                                
+                            </div>
+
+                            <Logo/>
+
+                            <div >
+                                <form method="post" action="#" className="form-item">
+                                
+                                        <label>
+                                            Name
+                                        </label>
+                                        <input type="text" name="name" id="name" />
+                                        <label>
+                                            Email
+                                        </label>
+                                        <input type="text" name="name" id="name" />
+                                        <label for="msg">Message:</label>
+                                        <textarea id="msg" name="user_message" rows="5"></textarea>
+                                
+
+                                </form>
+                                <div className="btn-form">
+                                    <Button type="light">SEND
+                                    </Button>
+                                </div>
+                            
+
+
+
+                            </div>
+
+
                         </div>
-                        <div className="footer-bg2">
-                                <AnchorLink
-                                className="footer-links"
-                                to="/"
-                                >
-                                Privacy
-                                </AnchorLink >
-                                <AnchorLink
-                                className="footer-links"
-                                to="/"
-                                >
-                                Help
-                                </AnchorLink>
-                                <AnchorLink
-                                className="footer-links"
-                                to="/"
-                                >
-                                Other
-                                </AnchorLink>
-                        </div>
-                        
-                    </div>
-
-                    <Logo/>
-
-                    <div >
-                        <form method="post" action="#" className="form-item">
-                           
-                                <label>
-                                    Name
-                                </label>
-                                <input type="text" name="name" id="name" />
-                                <label>
-                                    Email
-                                </label>
-                                <input type="text" name="name" id="name" />
-                                <label for="msg">Message:</label>
-                                <textarea id="msg" name="user_message" rows="5"></textarea>
-                        
-
-                        </form>
-                        <div className="btn-form">
-                            <Button type="light">SEND
-                            </Button>
-                        </div>
-                       
-
-
-
-                    </div>
-
-
                 </div>
+                    
                 <nav className="footer-nav">
                     <div className="links">
                         <AnchorLink
