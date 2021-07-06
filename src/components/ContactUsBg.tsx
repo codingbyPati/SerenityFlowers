@@ -6,27 +6,31 @@ import section2 from '../images/section2.png';
 import portfolioSample from '../images/portfolioSample.jpg';
 import flowerReview from '../images/flowerReview.png';
 import reviewCardData from "../data/reviewCardData";
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const ContactUsBg = () =>{
     return(
         <React.Fragment>
-            <section className="sectionBox dotted-bottom">
+            <section className="sectionBox dotted-bottom" id="flower-arrangment">
                 <div className="linksBar">
-                    <div>ANNIVERSARY</div>
-                    <div>BIRTHDAY</div>
-                    <div> WEDDINGS</div>
-                    <div> FUNERALS</div>
-                    <div> FESTIVALS</div>
-                    <div> CHRISTMAS</div>
-                    <div>THANKSGIVING</div>
+                    <div>Anniversary</div>
+                    <div>Birthday</div>
+                    <div> Weddings</div>
+                    <div> Funerals</div>
+                    <div> Festivals</div>
+                    <div> Christmas</div>
+                    <div>Thanksgiving</div>
                 </div>
                 <div className="lightPinkContainer">
-                        <div className="title-bgtwo">Most beautiful flowers</div>
+                        <div className="title-bgtwo">MOST BEAUTIFUL FLOWERS</div>
                         <p className="text-part">Donec lacinia lorem metus, eu euismod neque aliquam sagittis. In tempus nulla vel nisi aliquam tincidunt. Praesent a orci tincidunt, dignissim nunc a, ullamcorper nibh. Nullam nisl arcu, malesuada sed tortor id, placerat ullamcorper augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis et faucibus arcu. Proin id nisi dictum, maximus nisi quis, lobortis urna. Nam non purus in erat malesuada viverra euismod vitae mi.</p>
                         <div className="justify-content-center display-flex light-position">
-                            <Button type="light" >
-                            CONTACT US
-                            </Button>
+                            <AnchorLink to="/#contact-form" className="text-decoration-none">
+                                <Button type="light" >
+                                CONTACT US
+                                </Button>
+                            </AnchorLink>
+                           
                    
                    
                     
@@ -41,7 +45,7 @@ const ContactUsBg = () =>{
             <div className="page-width z-60">
                         <div className="grid double-grid-50-50" style={{maxWidth: "1140px"}}>
                             <div className="section-2-text">
-                            <h2  style={{zIndex:200, position:"relative", fontSize: "40px", color:"#DD6E89" , fontWeight:"bold"}}>LOREM IPSUM</h2>
+                            <h2  style={{zIndex:200, position:"relative", fontSize: "2rem", color:"#DD6E89" , fontWeight:"bold"}}>LOREM IPSUM</h2>
                                 <p>Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum</p>
                             </div>
                         </div>
@@ -72,7 +76,7 @@ const ContactUsBg = () =>{
                         <div className="grid double-grid-50-50-test z-60" style={{maxWidth: "1140px"}}>
                             <div></div>
                             <div className="section-2-text">
-                            <h2   style={{fontSize: "40px", color:"#DD6E89", fontWeight:"bold"}}>LOREM IPSUM</h2>
+                            <h2  style={{fontSize: "2rem", color:"#DD6E89", fontWeight:"bold"}}>LOREM IPSUM</h2>
                                 <p>Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsum</p>
                             </div>
                         </div>
@@ -80,7 +84,7 @@ const ContactUsBg = () =>{
                  
             </section>
 
-            <section className=" bg-style dotted-bottom dotted-top">
+            <section id="testimonials" className="bg-style dotted-bottom dotted-top">
                
                     <h1 className="title-bgtwo">OUR CLIENTS</h1>
                     <div className="grid-container-reviews">

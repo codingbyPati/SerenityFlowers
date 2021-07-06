@@ -4,10 +4,10 @@ import * as React from 'react';
 const Logo =() =>{
   
     return(
-        <div className="logo">
+        <div className="logo div2">
             <div className="pink-dot"></div>
-            <div style={{fontSize:"50px"}}>Serenity Flowers</div>
-            <div style={{color:"black", fontSize:"24px"}}>Flowers</div>
+            <div style={{fontSize:"2rem"}}>Serenity Flowers</div>
+            
         </div>
     )
         

@@ -10,46 +10,57 @@ import cancel from "../images/cancel.svg";
 import {Link} from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { AnchorLink } from 'gatsby-plugin-anchor-links';``
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { useSpring, animated } from 'react-spring';
 import {useState} from 'react';
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from "gatsby-background-image"
+
+
 
 const MainBackground = () => {
+  const data = useStaticQuery(graphql`
+  query backgroundQuery {
+    allFile(filter: {name: {in: "mainImage"}}) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+  `)
+
   const props = useSpring({ 
      to: { opacity: 1 },
      from: { opacity: 0 },
      delay: 1000,
     })
   const [menuActive, setMenuActive] = useState<boolean>(false)
+  const bgImage = convertToBgImage(data.allFile.edges[0].node.childImageSharp.gatsbyImageData);
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
  }
-    /*
-    const data = useStaticQuery(graphql`
-    query MyQuery {
-        allFile(filter: {name: {eq: "mainImage"}}) {
-          edges {
-            node {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-          }
-        }
-      }
-  `)
-  
-  const image = getImage(data.allFile.edges[0].node.childImageSharp.gatsbyImageData)
-  */
+    
+ 
+  console.log(bgImage)
 
 
     return (
         <React.Fragment>
-        <section className="landing-page">
+        <section className="landing-page" id="home">
           <header>
-            <div className="mainContainer" >
-              <img className="backgroundImg" justify-content="center" src={mainImage} alt="mainImage" />
+          <BackgroundImage
+            Tag="section"
+            // Spread bgImage into BackgroundImage:
+            {...bgImage}
+            preserveStackingContext
+          >
+            <div className="mainContainer">
+           
                 <div className="radial-background"></div>
                   <div className="logo-box">
                     <div className="contact-info">
@@ -77,36 +88,40 @@ const MainBackground = () => {
                       <img className="menu-btn" src={menuActive ? cancel : menubutton} />
                   
                   </div>
-                  {menuActive && <MobileMenu/> }
+                  {menuActive && <MobileMenu turnOffMenuFunc={toggleMenu} /> }
                    
                   <div className="navbar">
                     <AnchorLink
                     className="navbar-links"
-                    to="/"
+                    to="/#home"
                     >
                     Home
                     </AnchorLink>
                     <AnchorLink
                     className="navbar-links"
-                    to="/"
+                    to="#flower-arrangment"
                     >
                     Flower Arrangment
                     </AnchorLink>
                     <AnchorLink
                     className="navbar-links"
-                    to="/"
+                    to="#testimonials"
                     >
                     Testimonials
                     </AnchorLink>
                     <AnchorLink
                     className="navbar-links"
-                    to="/"
+                    to="#portfolio"
+                    >
+                    Portfolio
+                    </AnchorLink>
+                    <AnchorLink
+                    className="navbar-links"
+                    to="#contact"
                     >
                     Contact 
                   
                     </AnchorLink>
-                  
-                      
 
                     <div className="squareGradient grad-left">
 
@@ -118,25 +133,24 @@ const MainBackground = () => {
                   </div>
                  
                   <div>
-                      <animated.h1  className="title-bg" style={props}>Most beautiful flowers</animated.h1>
+                      <animated.h1  className="title-bg" style={props}>MOST BEAUTIFUL FLOWERS</animated.h1>
                   </div>
                   <div className="display-flex justify-content-center margin-top">
-                    <Button type="dark">
-                     Portfolio
+                    <AnchorLink to="/#portfolio" className="text-decoration-none">
+                        <Button type="dark">
+                        Portfolio
 
-                    </Button>
+                        </Button>
+                    </AnchorLink>
+                  
                   </div>
                   
             </div>
-           
-           
+            </BackgroundImage>
 
-    
             
           </header>
-         
-            
-           
+    
         </section>
         </React.Fragment>
   

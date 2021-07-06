@@ -1,31 +1,41 @@
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import * as React from 'react';
+import {useState} from 'react';
 
-
-const MobileMenu  =() => {
+interface IMobileMenu {
+    turnOffMenuFunc: any
+}
+const MobileMenu  =({turnOffMenuFunc}:IMobileMenu) => {
     return(
         <div className="menuBg">
             <AnchorLink
+            onAnchorLinkClick={turnOffMenuFunc}
             className="mobile-links"
-            to="/"
+            to="#home"
             >
             Home
             </AnchorLink>
             <AnchorLink
             className="mobile-links"
-            to="/"
+            to="#flower-arrangment"
             >
             Flower Arrangment
             </AnchorLink>
             <AnchorLink
             className="mobile-links"
-            to="/"
+            to="#testimonials"
             >
             Testimonials
             </AnchorLink>
             <AnchorLink
             className="mobile-links"
-            to="/"
+            to="#portfolio"
+            >
+            Portfolio
+            </AnchorLink>
+            <AnchorLink
+            className="mobile-links"
+            to="#contact-form"
             >
             Contact 
         
